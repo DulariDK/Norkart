@@ -1,0 +1,850 @@
+{
+	"info": {
+		"_postman_id": "75d02fa3-b7e8-42a9-abbf-6963505de97a",
+		"name": "Norkart Document Template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET request",
+			"item": [
+				{
+					"name": "Get Template by Key",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7ee99da9-b471-43c6-b9f2-9d9a0d03f13b",
+								"exec": [
+									"pm.test(\"Verify that Get Template by ID return Status code 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/DocumentTemplate/{{key}}?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"DocumentTemplate",
+								"{{key}}"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get template with merge fields by Key",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8c044ea4-eadf-4400-b804-b1ef28630453",
+								"exec": [
+									"pm.test(\"Verify that the Get template with mergeField by ID Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/DocumentTemplate/{{key}}/mergeFields?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"DocumentTemplate",
+								"{{key}}",
+								"mergeFields"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Template stream by  Key",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2b35434d-58dc-47fb-85ef-2b3a1fa81aee",
+								"exec": [
+									"pm.test(\"Verify that the Get templateStream by ID Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/DocumentTemplate/{{key}}/stream?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"DocumentTemplate",
+								"{{key}}",
+								"stream"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All templates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "94432bc9-29b3-4a8e-9ca2-fd52c6cde2e1",
+								"exec": [
+									"pm.test(\"Verify that the Get all template Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/DocumentTemplate?moduleId={{moduleID}}&apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"DocumentTemplate"
+							],
+							"query": [
+								{
+									"key": "moduleId",
+									"value": "{{moduleID}}"
+								},
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Merge Fields by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0100bc2d-217b-408e-b262-d4e4febc2fcc",
+								"exec": [
+									"pm.test(\"Verify that the Get MergeFields by ID Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/MergeFields/{{id}}?apitoken={{apikey}}  \n",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"MergeFields",
+								"{{id}}"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}  \n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Module",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b6533afd-0f2e-4289-9807-0ea5653b0d92",
+								"exec": [
+									"pm.test(\"Verify that the Get all module Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Module?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Module"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Batch Job status by Job ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "30271271-0623-4e32-a443-6cbf1dca1457",
+								"exec": [
+									"pm.test(\"Verify that the Get batchjob by jobID has 200 as status code\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/BatchJob/status/{{BatchjobID}}?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"BatchJob",
+								"status",
+								"{{BatchjobID}}"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "POST request",
+			"item": [
+				{
+					"name": "Create new Case category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9c58492c-561a-4cbf-90ad-8469715298e5",
+								"exec": [
+									"pm.test(\"Verify that the  Archive case category Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"navn\": \"string\",\r\n  \"mappetype\": \"string\",\r\n  \"statusNySaksmappe\": \"string\",\r\n  \"statusAvsluttSaksmappe\": \"string\",\r\n  \"arkivdel\": \"string\",\r\n  \"klasseListe\": [\r\n    {\r\n      \"klassifikasjonssystem\": \"string\",\r\n      \"klasseID\": \"string\",\r\n      \"rekkefolge\": \"string\"\r\n    }\r\n  ],\r\n  \"journalpostKategori\": [\r\n    {\r\n      \"ekspederFoerEndeligStatus\": true,\r\n      \"forfallAntallDager\": \"string\",\r\n      \"navn\": \"string\",\r\n      \"nyJournalpostArkiveringStatus\": \"string\"\r\n    }\r\n  ],\r\n  \"lukkSak\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/ArchiveCaseCategory?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"ArchiveCaseCategory"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new batch job",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "967d8ac2-06fc-4647-ac6a-fdb812d1f4f7",
+								"exec": [
+									"pm.test(\"Verify that the create new batch job Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"isSendToSvarUT\": true,\r\n  \"isArchived\": true,\r\n  \"templateKey\": \"string\",\r\n  \"documentDataList\": [\r\n    {\r\n      \"moduleData\": \"string\",\r\n      \"objectId\": \"string\"\r\n    }\r\n  ],\r\n  \"editableContents\": [\r\n    {\r\n      \"mergeFieldId\": 0,\r\n      \"content\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/BatchJob?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"BatchJob"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complete batch job",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7da601f-bee8-4681-aa12-7b41df5b036c",
+								"exec": [
+									"pm.test(\"Verify complete batch job Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"string\",\n        \"topic\": \"string\",\n        \"subject\": \"string\",\n        \"eventType\": \"string\",\n        \"eventTime\": \"2020-05-19T09:02:00.682Z\",\n        \"metadataVersion\": \"string\",\n        \"dataVersion\": \"string\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/BatchJob/complete?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"BatchJob",
+								"complete"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate New document ",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e0d64ff3-1b5a-45c1-811a-3d85d4ec630f",
+								"exec": [
+									"pm.test(\"Verify generate new document Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"isSendToSvarUT\": true,\r\n\t\"isArchived\": true,\r\n\t\"templateKey\": \"TestKey01\",\r\n\t\"editableContents\":[{\"Content\":\"This propety belongs to {{CompalainantName}} edited test\", \"MergeFieldID\":11},{\"Content\":\"This test property belogns to {{ComplainantName}} edited\",\"MergeFielId\":12}],\r\n\t\"documentData\":\r\n\t\t{\r\n\t\t\t\"moduleData\": \"{\\\"ComplainantName\\\":\\\"David\\\",\\\"ComplainantAddress\\\":\\\"Tronhein\\\",\\\"ComplaintAddress\\\":\\\"Oslo, Norway\\\",\\\"ComplaintCategory\\\":\\\"Poor area\\\",\\\"Date\\\":\\\"2020\\/02\\/28\\\",\\\"GroundForTheComplaint\\\":\\\"Wrong estimation\\\"}\",\r\n\t\t\t\"objectId\": \"2\",\r\n\r\n\t\t\t\"recipientAddress\": {\r\n\t\t\t\t\"Name\": \"DEV\",\r\n\t\t\t\t\"Address1\": \"adfasd1\",\r\n\t\t\t\t\"Address2\": \"dfderw2\",\r\n\t\t\t\t\"Address3\": \"zxcxcxv3\",\r\n\t\t\t\t\"Country\": \"cccMNBVC\",\r\n\t\t\t\t\"zipCode\": \"0099\",\r\n\t\t\t\t\"city\": \"zxzx\",\r\n\t\t\t\t\"birthNumber\": \"24079495855\"\r\n\t\t\t}\r\n\t\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Documente?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Documente"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new document template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f1925ba2-1b1b-452e-996b-c5b7d106b0fb",
+								"exec": [
+									"pm.test(\"Verify create new document template Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"new tittle\",\r\n\"Name\": \"Original doc  template new\",\r\n\"DocumentUrl\": \"\",\r\n\"Document\": \"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\",\r\n\"ModuleId\": 6,\r\n\"DocumentTemplates\": [],\r\n\"MergeFields\": [\r\n{\r\n\"id\": 0,\r\n\"name\": \"{{Namenew}}\",\r\n\"defaultContent\": \"\",\r\n\"hasDefaultContent\": false,\r\n\"isRequired\": true,\r\n\"mergeFieldTypeId\": 1,\r\n\"defaultTemplateId\": 0\r\n\r\n},\r\n{\r\n\"id\": 0,\r\n\"name\": \"{{ComplaintDatenew}}\",\r\n\"defaultContent\": \"\",\r\n\"hasDefaultContent\": false,\r\n\"isRequired\": true,\r\n\"mergeFieldTypeId\": 1,\r\n\"defaultTemplateId\": 0\r\n}\r\n]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/DocumentTemplate?apitoken={{apikey}} ",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"DocumentTemplate"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}} "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Merge fields",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "56f9d5c9-59bc-433e-97b7-d1a634e9739b",
+								"exec": [
+									"pm.test(\"Verify that the create merge fields Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"defaultContent\": \"string\",\r\n  \"hasDefaultContent\": true,\r\n  \"isRequired\": true,\r\n  \"mergeFieldTypeId\": 0,\r\n  \"defaultTemplateId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/MergeFields?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"MergeFields"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Document Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7f509856-396e-47ca-9aa9-034e633c9558",
+								"exec": [
+									"pm.test(\"Verify that the Get Document Status has 201 as status code\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"objectIds\": [\r\n    \"1\"\r\n  ],\r\n  \"startDate\": \"2020-02-15\",\r\n  \"endDate\": \"2020-04-16\",\r\n  \"batchJobId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Document/RetrieveDocumentListStatus?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Document",
+								"RetrieveDocumentListStatus"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PUT request ",
+			"item": [
+				{
+					"name": "Update existing template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7173e23a-38a9-47ff-bdba-b1c91edd53dd",
+								"exec": [
+									"pm.test(\"Verify that the update existing template Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"title\": \"string\",\r\n  \"key\": \"string\",\r\n  \"name\": \"string\",\r\n  \"documentUrl\": \"string\",\r\n  \"document\": \"string\",\r\n  \"moduleId\": 0,\r\n  \"mergeFields\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\",\r\n      \"defaultContent\": \"string\",\r\n      \"hasDefaultContent\": true,\r\n      \"isRequired\": true,\r\n      \"mergeFieldTypeId\": 0,\r\n      \"defaultTemplateId\": 0\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/DocumentTemplate/{{id}}?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"DocumentTemplate",
+								"{{id}}"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a merge field",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "51f95197-4169-402d-86ca-1148823b06d6",
+								"exec": [
+									"pm.test(\"Verify that the update merge fields Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"defaultContent\": \"string\",\r\n  \"hasDefaultContent\": true,\r\n  \"isRequired\": true,\r\n  \"mergeFieldTypeId\": 0,\r\n  \"defaultTemplateId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/MergeFields/{{id}}?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"MergeFields",
+								"{{id}}"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update merge fields",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0d901e29-074b-480e-a685-bacbde607798",
+								"exec": [
+									"pm.test(\"Verify that the update merge fields Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"mergeFieldId\": 0,\r\n    \"content\": \"string\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/MergeFields/template/{{key}}?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"MergeFields",
+								"template",
+								"{{key}}"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DEL request",
+			"item": [
+				{
+					"name": "Delete a merge field",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cdf731bc-ec18-45a1-9a8f-c7dbfa5e1d74",
+								"exec": [
+									"pm.test(\"Verify that the Delete merge field Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/MergeFields/{{id}}?apitoken={{apikey}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"MergeFields",
+								"{{id}}"
+							],
+							"query": [
+								{
+									"key": "apitoken",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f0813439-02fa-49c9-9fac-3ee15a6fb6a3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e1f8f0d9-ea24-49f8-9eeb-307f519816c8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
